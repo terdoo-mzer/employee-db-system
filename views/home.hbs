@@ -1,0 +1,16 @@
+
+<div class="row d-flex justify-content-end mt-4">
+    <div class="col-6 d-flex justify-content-end">
+        {{#if user}}
+        <a href="/profile" class="btn btn-primary align-self-center mx-2">Profile</a>
+        <a href="/logout" class="btn btn-primary align-self-center mx-2">Logout</a>
+        {{else}}
+         <a href="/registerEmployee" class="btn btn-primary align-self-center mx-2">Register</a>
+        <a href="/employeeLogin" class="btn btn-primary align-self-center mx-2">Login</a>
+        {{/if}}
+    </div>
+</div>
+
+<div class="row d-flex justify-content-center">
+    <h2>EMPLOYEE DATABASE MANAGEMENT SYSTEM</h2>
+</div>

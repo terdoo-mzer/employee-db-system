@@ -1,0 +1,84 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Create Employee Account</li>
+    </ol>
+</nav>
+
+{{#if message}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>{{message}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+{{#if submitted}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>{{submitted}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+
+
+<form class="row g-3 needs-validation" method="post" action="/registerEmployee">
+
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="first_name" value="{{this.first_name}}"
+                placeholder="First Name" name="first_name">
+            <label for="first_name">First Name</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="last_name" value="{{this.last_name}}" placeholder="Last Name"
+                name="last_name">
+            <label for="last_name">Last Name</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="phone" value="{{this.phone}}" placeholder="Phone"
+                name="phone">
+            <label for="phone">Phone</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" value="{{this.email}}" placeholder="Email"
+                name="email">
+            <label for="email">Email</label>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="pwd" value="" placeholder="Password"
+                name="password">
+            <label for="pwd">Set Password</label>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <select name="gender" id="gender" class="form-select" aria-label="Default select example">
+            <option selected>Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+
+    <div class="col-6">
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="confirm_pwd" value="" placeholder="Confirm Password"
+                name="confirm_password">
+            <label for="confirm_pwd">Confirm Password</label>
+        </div>
+    </div>
+
+
+    <div class="col-12 d-grid">
+        <button type="submit" class="btn btn-primary p-2">Submit</button>
+    </div>
+</form>
+

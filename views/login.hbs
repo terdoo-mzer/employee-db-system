@@ -1,0 +1,42 @@
+<nav aria-label="breadcrumb" class="mb-5">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Login</li>
+  </ol>
+</nav>
+
+{{#if message}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>{{message}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+<br>
+
+
+  <form class="row g-3 needs-validation" method="post" action="/employeeLogin">
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="employeeEmail" name="email" placeholder="Enter your email">
+        <label for="employeeEmail">Employee Email</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="employeePwd" name="password" placeholder="Enter your Password">
+        <label for="employeePwd">Password</label>
+      </div>
+      <div class="col-12 d-grid mt-3">
+        <button type="submit" class="btn btn-primary p-2">Login</button>
+      </div>
+  </form>
+
+
+<br>
+<br>
+<br>
+
+
+
+<div>
+  <p>Don't gave an account?</p>
+  <a href="/registerEmployee" class="btn btn-primary">Create Profile here</a>
+</div>
